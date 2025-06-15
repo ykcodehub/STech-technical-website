@@ -1,0 +1,7 @@
+
+@media (max-width: 858px){
+    .sidebar{
+        position: absolute;
+        z-index: 100;
+    }
+}

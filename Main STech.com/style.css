@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+header{
+   
+    position: fixed;
+    background: linear-gradient(to top left, #713eff, #fafaff);
+    top: 0;
+    width: 100%;
+    left:0;
+    z-index: 999;
+}
+.headerSpacing{
+    height: 48px;
+
+}
+label.logo{
+    color: rgb(78, 103, 241);
+    font-size: 35px;
+    line-height: 48px;
+    padding: 0 50px;
+    font-weight: bold;
+    font-family: montserrat;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+   justify-content: flex-start;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 48px;
+    /*list-style: none;*/
+     margin: 0 20px;
+     
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
+   text-decoration: none;
+   
+}
+.sidebar li a:hover {
+    background-color: #6a5edd;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 48px;
+    margin-right: 24px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }  
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 48px;
+        left: -50%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a.active,a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+body{
+    background: linear-gradient(to top left, #f5f6f8, #390dfc);
+}
+
+.slider{
+    overflow: hidden;
+    left: 50%;
+    width: 60%;
+    margin: auto;
+    margin-top: 2px;
+   border: 2px solid black;
+}
+.slider figure{
+    width: 400%;
+    position: relative;
+    animation: animate 10s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.slider figure img{
+    width: 25%;
+    float: left;
+    aspect-ratio: auto 810 / 400;
+    height: 400px;
+}
+@media (max-width: 952px){
+    .slider{
+        overflow: hidden;
+        left: 50%;
+        width: 100%;
+        margin: auto;
+    }
+    .slider figure{
+        width: 400%;
+        position: relative;
+        animation: animate 10s linear infinite;
+    
+    }
+    
+}
+@media (max-width: 858px){
+    .slider{
+        left: 100%;
+        width: 100%;
+    }
+    .slider figure img{
+        width: 25%;
+        float: left;
+        aspect-ratio: auto 810 / 400;
+        height: 200px;
+    }
+}
+.heading{
+    text-align: center;
+    padding-top: 15px;
+    color: rgb(19, 10, 59);
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 60px;
+}
+.main_service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.item{
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    width: 425px;
+    margin: 9px;
+    min-height: 540px;
+    max-height: 540PX;
+    position: relative;
+    box-shadow: 2px 2px 10px black;
+}
+
+.image img{
+    width: 100%;
+    min-height: 300px;
+    max-height: 300PX;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.title{
+    text-align: center;
+    padding: 5px;
+}
+.main_service .des {
+    text-align: center;
+    padding: 10px;
+}
+.des .test {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.des a{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    align-items: center;
+    background: white;
+    color: rgb(48, 28, 28);
+    border: 1px solid black;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    text-decoration: none;
+}
+.des a:hover{
+    background-color: black ;
+    color: white;
+    transition: .5s;
+}
+
